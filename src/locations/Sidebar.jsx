@@ -1,16 +1,33 @@
-import React from 'react';
-import { Paragraph } from '@contentful/f36-components';
-import { /* useCMA, */ useSDK } from '@contentful/react-apps-toolkit';
+import React, { useEffect } from 'react';
+import { useSDK } from '@contentful/react-apps-toolkit';
+import * as CC from '@contentful/f36-components';
+import $ from 'jquery';
 
 const Sidebar = () => {
   const sdk = useSDK();
-  /*
-     To use the cma, inject it as follows.
-     If it is not needed, you can remove the next line.
-  */
-  // const cma = useCMA();
 
-  return <Paragraph>Hello Sidebar Component (AppId: {sdk.ids.app})</Paragraph>;
+  useEffect(() => {
+    sdk.window.startAutoResizer();
+  });
+
+  return (
+    <div 
+      className='cc-sidebar' 
+      style={{
+        display:'flex', 
+        justifyContent:'left'
+      }}
+    >
+      <CC.Paragraph 
+        style={{
+          width:'100%', 
+          wordWrap:'normal'
+        }}
+      >
+        To be implemented
+      </CC.Paragraph>
+    </div>
+  );
 };
 
 export default Sidebar;

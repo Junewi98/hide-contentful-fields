@@ -41,7 +41,10 @@
     "@contentful/app-scripts": "1.15.0",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.2.1",
-    "cross-env": "7.0.3"
+    "cookie-handler": "^1.2.4",
+    "cross-env": "7.0.3",
+    "jquery": "^3.7.1",
+    "js-cookie": "^3.0.5"
   },
   "homepage": "."
 }
